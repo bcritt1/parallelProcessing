@@ -10,6 +10,6 @@
 ml load system imagemagick/7.0.7-2
 ml load system tesseract/5.1.0
 ml load system ghostscript/9.53.2
-file=$(ls /home/users/bcritt/pdfs/*.pdf | sed -n ${SLURM_ARRAY_TASK_ID}p)
+file=$(ls /home/users/$USER/pdfs/*.pdf | sed -n ${SLURM_ARRAY_TASK_ID}p)
 ./parallel_pdf_convert.sh -in $file
 

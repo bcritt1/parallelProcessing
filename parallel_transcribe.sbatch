@@ -9,4 +9,4 @@
 
 # load python and set input location
 ml python/3.9.0
-python3 parallel_transcribe.py --file "/home/users/bcritt/audio/recording${SLURM_ARRAY_TASK_ID}.wav"
+python3 parallel_transcribe.py --file "/home/users/$USER/audio/recording${SLURM_ARRAY_TASK_ID}.wav"
